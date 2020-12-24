@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <style>
+    .btn-success,
+    #return {
+      width: 77px;
+    }
+    h1 {
+      color: rgb(0, 89, 255);
+    }
+    #submit,
+    #return {
+      background-color: rgb(0, 89, 255);
+    }
+  </style>
+</head>
+
+<body class="bg-secondary">
+
+  <div class="card border border-dark" style="width: 50rem; margin: 5rem;">
+    <div class="card-header">
+      <h1 class="card-title p-5 pb-1">Sample Form With Javascript Validation</h1>
+      <em><p class="card-text text-center">* Indicates Required Field</p></em>
+    </div>
+
+    <div class="card-body">
+      <form class="p-5 pb-3" id="submitForm">
+        <!-- contact -->
+        <fieldset>
+          <legend>Contact Information</legend>
+            <input id="firstName" class="m-1" type="text" placeholder="First Name*"/>
+            <span class="invalid-feedback">
+              Name must be between 2-20 characters.
+            </span>
+            
+            <input id="lastName" class="m-1" type="text" placeholder="Last Name*"/>
+            <span class="invalid-feedback">
+              Last name must be between 2-20 characters.
+            </span>
+
+            <input id="phoneNumber" class="m-1" type="tel" placeholder="Phone Number*" />
+            <span class="invalid-feedback">
+              Phone number must be in xxx-xxx-xxxx format.
+            </span>
+
+            <input id="email" class="m-1 mb-3" type="Email" placeholder="Email Address*"/>
+            <span class="invalid-feedback">
+              Email must be in name@email.com format.
+            </span>
+          <!-- pronouns -->
+          <div class="mx-5">
+            <p class="py-2 mb-0">What are your prefered pronouns?</p>
+              <input type="radio" id="she/her" name="gender">
+              <label for="she/her">She/ Her</label><br>
+              <input type="radio" id="he/him" name="gender">
+              <label for="he/him">He/ Him</label><br>
+              <input type="radio" id="they/them" name="gender">
+              <label for="they/them">They/ Them</label><br />
+              <input type="radio" id="other" name="gender">
+              <label for="other">Other/ Please specify:<input class="mx-2" type="text" /></label>
+          </div>
+        </fieldset>
+        <hr>
+   
+
+        <!-- occupation -->
+        <fieldset class="py-5">
+          <legend>Occupation</legend>
+            <label for="jobs">Choose a job:</label>
+              <select class="mb-3" id="jobs" name="jobs">
+                <option value="">Agriculture, Food and Natural Resources</option>
+                <option value="">Architecture and Construction</option>
+                <option value="">Arts, Audio/Video Technology and Communications</option>
+                <option value="">Business Management and Administration</option>
+                <option value="">Education and Training</option>
+                <option value="">Finance</option>
+                <option value="">Freelance, Self Employeed</option>
+                <option value="">Government and Public Administration</option>
+                <option value="">Health Science</option>
+                <option value="">Hospitality and Tourism</option>
+                <option value="">Human Services</option>
+                <option value="">Information Technology</option>
+                <option value="">Law, Public Safety, Corrections and Security</option>
+                <option value="">Manufacturing</option>
+                <option value="">Science, Technology, Engineering and Mathematics</option>
+                <option value="">Student</option>
+                <option value="">Transportation, Distribution and Logistics</option>
+                <option value="">Unemployeed</option>
+              </select>
+            <!-- current work status -->
+            <div class="mx-5">
+              <p class="py-2 mb-0">What is your current work status?</p>
+                <input type="radio" id="ft" name="workStatus"/>
+                <label for="ft">Full time</label><br>
+                <input type="radio" id="pt" name="workStatus"/>
+                <label for="pt">Part time</label><br>
+                <input type="radio" id="seasonal" name="workStatus"/>
+                <label for="seasonal">Seasonal hire</label><br>
+                <input type="radio" id="temp" name="workStatus"/>
+                <label for="temp">Temporary hire</label><br>
+                <input type="radio" id="contract" name="workStatus"/>
+                <label for="contract">Contracted hire</label><br>
+                <input type="radio" id="unemployeed" name="workStatus"/>
+                <label for="unemployeed">Currently unemployeed</label><br>
+                <input type="radio" id="paidIntern" name="workStatus"/>
+                <label for="contract">Paid intern</label><br>
+                <input type="radio" id="unpaidIntern" name="workStatus"/>
+                <label for="contract">Unpaid intern</label><br>
+              <!-- current pay rate -->
+                <p class="pt-4 mb-2">What is your current or most previous pay rate?</p>
+                <input class="mx-2" type="number" name="" value="" placeholder="$ USD">per
+                <select class="rate" name="payRate">
+                  <option value="">hour</option>
+                  <option value="">week</option>
+                  <option value="">two weeks</option>
+                  <option value="">month</option>
+                  <option value="">quarter year</option>
+                  <option value="">year</option>
+                </select>
+              <!-- preferred pay rate -->
+                <p class="pt-4 mb-2">Estimate a preferred starting <strong>hourly </strong>pay rate.</p>
+                <div class="payRange">
+                  <input type="range" name="" class="slider" value="1" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+                   $ <output>1</output> /hr
+                </div>
+              <!-- preferred work status -->
+                <p class="pt-4 mb-2">Which work status do you prefer?<br><em>Check all that apply</em></p>
+                <input type="checkbox" id="ft" name="workPref"/>
+                <label for="ft">Full time</label><br>
+                <input type="checkbox" id="pt" name="workPref"/>
+                <label for="pt">Part time</label><br>
+                <input type="checkbox" id="seasonal" name="workPref"/>
+                <label for="seasonal">Seasonal hire</label><br>
+                <input type="checkbox" id="temp" name="workPref"/>
+                <label for="temp">Temporary hire</label><br>
+                <input type="checkbox" id="contract" name="workPref"/>
+                <label for="contract">Contracted hire</label><br>
+                <input type="checkbox" id="unemployeed" name="workPref"/>
+                <label for="unemployeed">Currently unemployeed</label><br>
+                <input type="checkbox" id="paidIntern" name="workPref"/>
+                <label for="contract">Paid intern</label><br>
+                <input type="checkbox" id="unpaidIntern" name="workPref"/>
+                <label for="contract">Unpaid intern</label><br>
+            </div>
+        </fieldset>
+        <hr>
+
+        <!-- about -->
+        <fieldset class="py-5">
+          <legend>About</legend>
+          <p>Tell us a little bit about yourself.</p>
+            <div class="mx-5">
+              <p class="mb-2">What is your favorite color?</p>  
+              <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+              <em>Click the color icon to choose color</em>
+
+            <p class="mt-4 mb-2">When was the last time you went on a vacation?</p>
+            <input type="date" name="" value="">
+
+            <p class="mt-4 mb-2">Where did you go?</p>
+            <textarea rows="5" cols="55" type="text" name="comment" placeholder="Briefly describe your last vacation."></textarea>
+            </div>
+        </fieldset>
+      
+    </div>
+        <!-- card footer -->
+          <div class="card-footer text-center p-5">
+          <input href="#" class="btn btn-secondary" type="reset" value="Reset" onclick="window.scrollTo(0,0)">
+            <span class="toolTip" tabindex="0" data-toggle="tooltip" title="* Please Fill In The Required Fields">
+            <input id="submit" class="btn text-white" type="submit" value="Submit" disabled >
+          </span>
+            
+        </div>
+      </form>
+    </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
