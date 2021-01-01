@@ -37,13 +37,21 @@ A simple app demonstrating the use of multiple types of javascript form inputs. 
 
 ### Landing Page
 
-Our responsive design approach allows for ease of access across multiple devices.
+Responsive design and mobile first approach allow for ease of access across devices.
 
 <img src="images/viewports.png">
 
-### Demo
-
 Here is a working live demonstration: https://mrblach.github.io/js-form/
+
+### Steps To Execute This App
+- Download the entire code
+- Open the index.html file
+
+### Technologies used:
+- HTML
+- CSS 
+- Bootstrap
+- Javascript 
 
 ---
 <h1 id="development">Development</h1>
