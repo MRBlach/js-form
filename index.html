@@ -35,22 +35,22 @@
         <!-- contact -->
         <fieldset>
           <legend>Contact Information</legend>
-            <input id="firstName" class="m-1" type="text" placeholder="First Name*"/>
+            <input id="firstName" class="m-1" type="text" placeholder="First Name*" required/>
             <span class="invalid-feedback">
               Name must be between 2-20 characters.
             </span>
             
-            <input id="lastName" class="m-1" type="text" placeholder="Last Name*"/>
+            <input id="lastName" class="m-1" type="text" placeholder="Last Name*" required/>
             <span class="invalid-feedback">
               Last name must be between 2-20 characters.
             </span>
 
-            <input id="phoneNumber" class="m-1" type="tel" placeholder="Phone Number*" />
+            <input id="phoneNumber" class="m-1" type="tel" placeholder="Phone Number*" required/>
             <span class="invalid-feedback">
               Phone number must be in xxx-xxx-xxxx format.
             </span>
 
-            <input id="email" class="m-1 mb-3" type="Email" placeholder="Email Address*"/>
+            <input id="email" class="m-1 mb-3" type="Email" placeholder="Email Address*" required/>
             <span class="invalid-feedback">
               Email must be in name@email.com format.
             </span>
@@ -174,7 +174,7 @@
           <div class="card-footer text-center p-5">
           <input href="#" class="btn btn-secondary" type="reset" value="Reset" onclick="window.scrollTo(0,0)">
             <span class="toolTip" tabindex="0" data-toggle="tooltip" title="* Please Fill In The Required Fields">
-            <input id="submit" class="btn text-white" type="submit" value="Submit" disabled >
+            <input id="submit" class="btn text-white" type="submit" value="Submit">
           </span>
             
         </div>

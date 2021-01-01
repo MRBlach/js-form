@@ -5,14 +5,7 @@ document.getElementById('lastName').addEventListener('blur',validateLastName);
 document.getElementById('phoneNumber').addEventListener('blur',validatePhoneNumber);
 document.getElementById('email').addEventListener('blur',validateEmail);
 
-// document.getElementById('submit').addEventListener('click', validateSubmit);
-
-
-document.getElementById('firstName').addEventListener('blur',validateForm);
-document.getElementById('lastName').addEventListener('blur',validateForm);
-document.getElementById('phoneNumber').addEventListener('blur',validateForm);
-document.getElementById('email').addEventListener('blur',validateForm);
-
+// validate user input
 const isValid = {
   fname: false,
   lname: false,
@@ -81,23 +74,7 @@ function validateEmail () {
   }
 }
 
-
-function validateForm() {
-  // check if all the values in the isValid state are true
-  const canSubmit = Object.values(isValid).every((val) => val)
- 
-  // if all fields are valid then enable the submit
-  if (canSubmit) {
-    submitButton.disabled = false;
-    toolTip.title = 'Submit';
-    } else {
-      submitButton.disabled = true;
-    }
-}
-
-
 // Thank You page
-// document.querySelector('.btn-success').addEventListener('click', thankYou)
 function thankYou() {
 
   document.querySelector('.card-header').innerHTML = `
