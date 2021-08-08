@@ -1,4 +1,7 @@
 <h1 align="center">
+  <br>
+  <img src="https://i.ibb.co/HY6qdKV/thumbnail.png" width="300px">
+  <br>
 Javascript Forms
 </h1> 
 <p align="center">
