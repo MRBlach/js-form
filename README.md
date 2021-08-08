@@ -21,7 +21,7 @@ Javascript Forms
 
 <h1 id="introduction">Introduction</h1>
 
-A simple app demonstrating the use of multiple types of javascript form inputs. Includes form validation and inline comments for easy reading.
+Demonstrating the use of multiple types of javascript form inputs. Includes form validation and inline comments for easy reading.
 
 <h1 id="features">Key Features</h1>
 
@@ -41,7 +41,7 @@ Responsive design and mobile first approach allow for ease of access across devi
 
 <img src="images/viewports.png">
 
-Here is a working live demonstration: https://mrblach.github.io/js-form/
+Here is a working live [demonstration](https://mrblach.github.io/js-form/)
 
 ### Steps To Execute This App
 - Download the entire code
